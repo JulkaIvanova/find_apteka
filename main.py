@@ -19,10 +19,7 @@ search_params = {
 response = requests.get(search_api_server, params=search_params)
 json_response = response.json()
 
-points = []
-first_point = ""
-second_point = ""
-third_point = ""
+
 organization = json_response["features"][0]
 org_name = organization["properties"]["CompanyMetaData"]["name"]
 org_address = organization["properties"]["CompanyMetaData"]["address"]
